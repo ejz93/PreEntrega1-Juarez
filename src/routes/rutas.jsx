@@ -4,11 +4,10 @@ import Home from "../pages/Home";
 import Checkout from "../pages/Checkout";
 import ItemDetailContainer from "../components/ItemDetailContainer/ItemDetailContainer";
 import NavBar from "../components/Navbar/NavBar";
-import ItemListContainer from "../components/ItemListContainer/ItemListContainer";
 import Footer from "../components/Footer/Footer";
+import ItemFilterContainer from "../components/ItemDetailContainer/ItemFilterContainer";
 
 const Rutas = () => {
-
   return (
     <BrowserRouter>
       <NavBar
@@ -16,12 +15,12 @@ const Rutas = () => {
         navbarLogo={"Elemental"}
       />
       <Routes>
-        <Route path="/" element={<><Home /><ItemListContainer /></>}/>
-        <Route path="/checkout" element={<Checkout />} />
-        <Route path="/category/item/:id" element={<ItemDetailContainer />} />
+        <Route path="/" element={<Home />} />
         <Route path="/item/:id" element={<ItemDetailContainer />} />
+        <Route path="/category/:category" element={<ItemFilterContainer />} />
+        <Route path="/checkout" element={<Checkout />} />
       </Routes>
-      <Footer/>
+      <Footer />
     </BrowserRouter>
   );
 };
