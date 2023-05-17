@@ -3,7 +3,6 @@ import {Badge, IconButton} from '@mui/material';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 
 const CartWidgetView = ({color}) => {
-  console.log('Contenido de color: =>', color);
   return (
     <IconButton
       size='large'
