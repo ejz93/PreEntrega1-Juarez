@@ -31,7 +31,10 @@ const ItemDetailContainer = () => {
         Back
       </button>
       <hr />
-      {loading && <h1>Loading ...</h1>}
+      {loading && <div className="d-flex align-items-center text-warning">
+  <strong>Loading...</strong>  
+  <div className="text-warning spinner-border ms-left" role="status" aria-hidden="true"></div>
+</div>}
       {item && !loading && (
         <div className="container-fluid">
             {/* <p>{item.id}</p> */}

@@ -1,13 +1,9 @@
 import React from "react";
-import { Fragment } from "react";
+
+import ItemListContainer from "../components/ItemListContainer/ItemListContainer";
 
 const Home = () => {
-
-  return (
-    <Fragment>
-      
-    </Fragment>
-  );
+  return <ItemListContainer />;
 };
 
 export default Home;
